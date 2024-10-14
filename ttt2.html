@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Part 2</title>
+    <style>
+        #board {
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px; 
+            margin: 0 auto;
+        }
+
+        .square {
+            width: 90px;
+            height: 90px;
+            background-color: #d3d3d3; 
+            text-align: center;
+            font-size: 64px;
+            font-weight: bold;
+            line-height: 90px;
+            margin: 5px;
+        }
+
+        .square:hover {
+            background-color: #808080;
+        }
+
+        #turnIndicator {
+            text-align: center;
+            border: 2px solid #000;
+            width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        #winCondition {
+            text-align: center;
+            border: 2px solid #000;
+            width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #52109f; 
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 50px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>TICK TACK TOE</h1>
+    
+    <div id="turnIndicator">X's turn!</div>
+    
+    <div id="board">
+
+    <script>
+        const NUM_SQUARES = 9;
+        const board = document.getElementById('board');
+
+        for (let i = 0; i < NUM_SQUARES; i++) {
+            const id = "sq" + i;
+            document.write("<div class='square' id='" + id + "'></div>");
+        }
+        </script>
+    </div>
+    <div id="winCondition">Still no winner!</div>
+    <script>
+        document.getElementById("sq2").innerHTML = "X";
+        document.getElementById("sq3").innerHTML = "O";
+    </script>
+</body>
+</html>
